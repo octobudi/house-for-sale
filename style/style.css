@@ -1,0 +1,423 @@
+/* Base Styles */
+:root {
+    --primary-color: #e8a87c;
+    --secondary-color: #d8b26e;
+    --accent-color: #c17c4e;
+    --text-color: #333;
+    --light-color: #fff;
+    --dark-color: #222;
+    --bg-light: #fdf6ec;
+    --bg-medium: #f8e9d6;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--dark-color);
+    padding: 15px 0;
+    color: var(--light-color);
+}
+
+.brand {
+    margin: 0;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.tagline {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://placehold.co/1200x800/e8c39e/ffffff?text=Luxury+Home');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.lead {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin-right: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.feature i {
+    margin-right: 8px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+.price-tag {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.currency {
+    font-size: 30px;
+    vertical-align: top;
+    position: relative;
+    top: 10px;
+}
+
+.amount {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 80px 0;
+    background-color: var(--bg-medium);
+}
+
+.gallery-grid {
+    margin-bottom: 30px;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* Video Tour Section */
+.video-tour {
+    padding: 80px 0;
+    background-color: var(--bg-medium);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Location Section */
+.location {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.location-highlights {
+    margin-top: 40px;
+}
+
+.location-item {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.location-item i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.location-item h4 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: var(--bg-medium);
+}
+
+.agent-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.agent-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid var(--primary-color);
+}
+
+.agent-title {
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.agent-info p {
+    margin-bottom: 10px;
+}
+
+.agent-info i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.agent-info .cta-button {
+    margin-top: 20px;
+}
+
+.schedule-visit {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.schedule-visit h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(232, 168, 124, 0.2);
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    color: var(--light-color);
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    .price-tag {
+        margin-top: 30px;
+    }
+    
+    .currency {
+        font-size: 24px;
+    }
+    
+    .amount {
+        font-size: 42px;
+    }
+    
+    .feature-box, .location-item, .agent-info, .schedule-visit {
+        margin-bottom: 20px;
+    }
+}
+
+/* GLightbox Custom Styles */
+.glightbox-container {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.gclose {
+    background: var(--primary-color);
+}
+
+.gnext, .gprev {
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
